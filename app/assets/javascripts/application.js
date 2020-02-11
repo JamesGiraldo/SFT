@@ -11,5 +11,14 @@
 // about supported directives.
 //
 
-//= require rails-ujs
 //= link application.js
+//= require rails-ujs
+//= require activestorage
+//= require jquery/jquery-3.1.1.min.js
+//= require popper
+//= require bootstrap
+//= require pace/pace.min.js
+//= require peity/jquery.peity.min.js
+//= require slimscroll/jquery.slimscroll.min.js
+//= require metisMenu/jquery.metisMenu.js
+//= require inspinia.js
