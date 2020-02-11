@@ -13,14 +13,20 @@
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div id="wrapper" class="<%= params[:controller] %>.<%= params[:action] %>">
+        <!-- Navigation -->
+        <%= render 'layouts/navigation' %>
+        <!-- Page wraper -->
         <div id="page-wrapper" class="gray-bg <%= @extra_class %>">
-          <ul class="dropdown-menu animated fadeInRight m-t-xs">
-             <li><a class="dropdown-item" href=" <%= edit_user_registration_path %>" class="btn btn-nar">Mi Perfil</a></li>
-             <li><a class="dropdown-item" href="#">Buzón</a></li>
-             <li class="dropdown-divider"></li>
-             <li><%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class:"btn btn-nar"%></li>
-         </ul>
+            <!-- Page wrapper -->
+            <%= render 'layouts/topnavbar' %>
+            <!-- Main view  -->
+            <section class="down">
+              <%= breadcrumbs display_single_fragment: true, style: :bootstrap %>
+            </section>
+            <%= custom_bootstrap_flash %>
             <%= yield %>
+            <!-- Footer -->
+            <%= render 'layouts/footer' %>
         </div>
     </div>
     <%= javascript_include_tag params[:controller] if javascript_exists?(params[:controller]) %>
